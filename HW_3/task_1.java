@@ -44,16 +44,11 @@ import java.util.stream.Stream;
  */
 public class task_1 {
 
-    public static void main(String[] args){
-        
+    public static void main(String[] args) throws IOException {
+
         String[] data = validInfo();
         writeFile(data);
-        try {
-            
-            readFile(data[0]);
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
+        readFile(data[0]);
     }
 
     // Получение данных от пользователя
@@ -174,7 +169,7 @@ public class task_1 {
             bufferWriter.write("\n");
             bufferWriter.close();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
+            System.out.println("Ошибка записи в файл");
             e.printStackTrace();
         }
     }
